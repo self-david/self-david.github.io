@@ -1,0 +1,5 @@
+color-logo:   #f50
+color-header: #234
+color-body:   #123
+color-bar:    #4981B8
+color-menu:   #fff
