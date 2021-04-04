@@ -1,0 +1,24 @@
+body {
+    background-color: #123;
+    color: #fff;
+    overflow-x: hidden;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body::-webkit-scrollbar {
+	width: .3rem;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: #123;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #4981B8;
+}
+
+.hiden {
+    overflow: hidden;
+}
