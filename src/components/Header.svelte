@@ -60,6 +60,8 @@
     }
 
     .header-link {
+        display: flex;
+        align-items: center;
         height: 100%;
     }
 

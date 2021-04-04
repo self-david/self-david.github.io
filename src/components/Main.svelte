@@ -78,7 +78,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		margin: 1.5rem 2.3rem;
+		margin: 1.5rem 2rem;
 	}
 
 	.me {
@@ -87,13 +87,13 @@
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
-		margin: 3rem 0;
+		margin: 2.3rem 0;
 		font-family: monospace;
 	}
 
 	.photo {
 		border-radius: 50%;
-		height: 230px;
+		height: 200px;
 		filter: grayscale(1);
 		margin-bottom: 1rem;
 		z-index: -1;
