@@ -35,7 +35,7 @@
     <nav class="navbar {navbar__hiden}" id="navbar">
         <ul class="navbar__list">
             {#each navBar as opc}
-                <li class="navbar__item"><a href="#{opc}" class="navbar__link">{opc}</a></li>
+                <li class="navbar__item"><a href="#{opc}" class="navbar__link" on:click="{activate}">{opc}</a></li>
             {/each}
         </ul>
     </nav>
@@ -64,7 +64,7 @@
     }
 
     .header-logo {
-        height: 90%;
+        height: 80%;
     }
 
     .burger-icon {
@@ -77,35 +77,35 @@
         cursor: pointer;
         position: fixed;
         right: 0;
+        top: 5px;
         z-index: 100;
     }
 
     .burger-icon__bar {
         background-color: #fff;
         width: 40px;
-        height: 5px;
-        border-radius: 2.5px;
+        height: 4px;
+        border-radius: 2px;
         position: relative;
-        /* z-index: 100; */
     }
 
     .burger-icon__bar::before, .burger-icon__bar::after {
         content: '';
         background-color: #fff;
         width: 40px;
-        height: 5px;
-        border-radius: 2.5px;
+        height: 4px;
+        border-radius: 2px;
         position: absolute;
         display: block;
         transition: .5s;
     }
 
     .burger-icon__bar::before {
-        top: -11px;
+        top: -10px;
     }
     
     .burger-icon__bar::after {
-        top: 11px;
+        top: 10px;
     }
 
     .burger--active {
@@ -129,7 +129,7 @@
         top: 0;
         height: 100vh;
         transition: 1s;
-        /* z-index: -1; */
+        z-index: 50;
     }
 
     .navbar--hiden {
