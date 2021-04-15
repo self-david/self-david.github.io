@@ -1,5 +1,5 @@
 body {
-    background-color: #123;
+    background-color: #14162C;
     color: #fff;
     overflow-x: hidden;
 	margin: 0;
@@ -12,11 +12,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-	background-color: #123;
+	background-color: #14162C;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #4981B8;
+	background-color: #DA77FF;
 }
 
 .hiden {

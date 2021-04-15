@@ -1,9 +1,13 @@
 <script>
-
+    export let cssVar;
 </script>
 
 
-<aside>
+<aside
+    style="--background: {cssVar.background};
+    --background2: {cssVar.background2};
+    --violet: {cssVar.violet};
+    --red: {cssVar.red};">
     <div class="follow-me">Sigueme en mis redes sociales</div>
     <ul class="social">
         <li class="social__item"><a href="https://github.com/self-david" target="_blank" class="social__link">
@@ -81,8 +85,8 @@
 
     .social__icon:hover {
             
-        fill: #f50;
-        stroke: #f50;
+        fill: var(--violet);
+        stroke: var(--violet);
         transform: translateY(2.5px);
     }
 </style>

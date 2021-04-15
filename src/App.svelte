@@ -25,7 +25,7 @@
 <Main cssVar={cssVar} />
 
 
-<Redes />
+<Redes cssVar={cssVar} />
 <Footer />
 
 <style>

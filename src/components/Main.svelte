@@ -1,4 +1,5 @@
 <script>
+	import Carousel from './Carousel.svelte';
 	export let cssVar;
 </script>
 
@@ -9,18 +10,22 @@
 	 		  --violet: {cssVar.violet};
 	 		  --red: {cssVar.red};">
 
-	
-	<!-- SOBRE MI -->
+	<!-- INIT -->
 	<div class="me" style="--background: {cssVar.background};">
 		<div class="me-bg"></div>
-		<span class="text me-text">
-			Mi nombre es <h1>David</h1> y soy desarrollador
-			de software, si estas interesado en alguna
-			aplicación o si tan solo quieres ver un poco de mi
-			trabajo puedes mirarlo más abajo.</span>
-
+		<span class="text" id="title">
+			Soy creador de sitios web y aplicaciones
+		</span>
 	</div>
 
+	<div>
+		<svg version="1.1" class="arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 21.825 21.825">
+		<path d="M16.791,13.254c0.444-0.444,1.143-0.444,1.587,0c0.429,0.444,0.429,1.143,0,1.587l-6.65,6.651
+			c-0.206,0.206-0.492,0.333-0.809,0.333c-0.317,0-0.603-0.127-0.81-0.333l-6.65-6.651c-0.444-0.444-0.444-1.143,0-1.587
+			s1.143-0.444,1.587,0l4.746,4.762V1.111C9.791,0.492,10.299,0,10.918,0c0.619,0,1.111,0.492,1.111,1.111v16.904L16.791,13.254z"/>
+		</svg>
+	</div>
 
 
 	<!-- SOBRE MI -->
@@ -28,10 +33,13 @@
 		<svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m433 512c-11.046 0-20-8.954-20-20 0-78.299-63.701-142-142-142h-30c-78.299 0-142 63.701-142 142 0 11.046-8.954 20-20 20s-20-8.954-20-20c0-100.355 81.645-182 182-182h30c100.355 0 182 81.645 182 182 0 11.046-8.954 20-20 20z"/></g><g><path d="m254 270c-74.439 0-135-60.561-135-135s60.561-135 135-135 135 60.561 135 135-60.561 135-135 135zm0-230c-52.383 0-95 42.617-95 95s42.617 95 95 95 95-42.617 95-95-42.617-95-95-95z"/></g></g></svg>
 		<h2 class="title">Sobre mi</h2>
 		<span class="text">
-			soy un apasionado de la tecnologia y me encanta  crear vida en internet.
-			Me especializo en crear (y ocacionalmente en diseñar)
-			<strong>Aplicaciones Web</strong> y <strong>Aplicaciones De Escritorio</strong>
+			Mi nombre es David y soy  un apasionado por la tecnologia,
+			me encanta crear experiencias increibles y me especializo en la
+			creacion y el diseño de <h1><strong>Aplicaciones Moviles</strong></h1>,
+			<strong>Web</strong> y de <strong>Escritorio</strong>
 			puedo convertir tu idea de un negocio en realidad.
+			si quieres ver un poco de mi
+			trabajo puedes mirarlo más abajo.
 		</span>
 	</div>
 
@@ -47,37 +55,30 @@
 			</svg>
 		<h2 class="title">Contacto</h2>
 		<span class="text">
-			soy un apasionado de la tecnologia y me encanta  crear vida en internet.
-			Me especializo en crear (y ocacionalmente en diseñar)
-			<strong>Aplicaciones Web</strong> y <strong>Aplicaciones De Escritorio</strong>
-			puedo convertir tu idea de un negocio en realidad.
+			¿Quieres crear una aplicaciones o un sitio web? o tan solo te gustaria
+			conocer el costo aproximado, mandame un correo
+			<a class="url" href="mailto:david_xd1996@live.com.mx">Aqui</a>.
+			¿Te gustaria saber que habilidades tengo? puedes ver mi CV
+			<a class="url" href="mailto:david_xd1996@live.com.mx">Aqui</a>. 
 		</span>
 	</div>
 
 
 
 	<!-- PORTAFOLIO -->
-	<div class="card" >
+	<div class="data" >
 		<h2 class="title">portafolio</h2>
-		<div class="portafolio">
-			<div>proyecto 1</div>
-			<div>proyecto 2</div>
-			<div>proyecto 3</div>
-			<div>proyecto 4</div>
-			<div>proyecto 5</div>
-			<div>proyecto 6</div>
-			<div>proyecto 7</div>
-			<div>proyecto 8</div>
-			<div>proyecto 9</div>
-			<div>proyecto...</div>
+		<div class="proyect">
+			<Carousel />
 		</div>
 	</div>
+
 	
 
 	<!-- MIS HABILIDADES -->
-	<div class="card">
+	<div class="data">
 		<h2 class="title">habilidades</h2>
-		<span class="justify">
+		<span class="text">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quibusdam sunt, dignissimos reiciendis voluptate nihil iusto facere, laborum incidunt sint fuga accusantium eius sequi illum nemo quaerat aspernatur consectetur praesentium.
 		</span>
 	</div>
@@ -96,12 +97,43 @@
 		flex-direction: column;
 	}
 
+	#title {
+		z-index: 50;
+		position: absolute;
+		text-shadow:  2px 2px var(--background);
+		font-size: 1.7rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
 	h1 {
 		display: inline;
 		font-size: 1rem;
 		font-family: sans-serif;
 		font-weight: 100;
 	}
+
+	.arrow-down {
+		margin: 3rem 0;
+		fill: var(--violet);
+		width: 50px;
+		animation: gradient 3s infinite ;
+	}
+
+	@keyframes gradient {
+        0% {
+            fill: #fff;
+        }
+        35% {
+            fill:var(--violet) ;
+        }
+        65% {
+            fill:var(--violet) ;
+        }
+		100% {
+            fill: #fff;
+		}
+    }
 
 	.me {
 		width: 100vw;
@@ -117,16 +149,10 @@
 					no-repeat
 					center
 					center/cover;
-		filter: blur(5px);
+		filter: blur(4px);
 		width: 100%;
 		height: 100%;
-		opacity: .25;
-	}
-
-	.me-text {
-		z-index: 50;
-		position: absolute;
-		text-shadow:  2px 2px var(--background);
+		opacity: .3;
 	}
 
 	.text {
@@ -137,12 +163,15 @@
 		text-align: justify;
 	}
 
+
+
 	.data {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		margin: 3rem 0;
+		margin: 2rem 0;
+		width: 100%;
 	}
 
 	.icon {
@@ -153,6 +182,35 @@
 		padding: 15px;
 		fill: var(--violet);
 	}
+
+	.url:link, .url:active, .url:visited {
+		color: var(--violet);
+		text-decoration: none;
+	}
+
+	.portafolio {
+		display: flex;
+		/* align-items: center; */
+		/* justify-content: flex-start; */
+		width: 100%;
+		margin: 0 1.5rem;
+		/* flex: 1; */
+		flex-wrap: wrap;
+	}
+
+	.proyect {
+		width: 100%;
+	}
+
+
+
+
+
+
+
+
+
+
 
 
 
