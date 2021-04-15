@@ -4,19 +4,34 @@
 	import Main from './components/Main.svelte';
 	import Redes from './components/Redes.svelte';
 	import Footer from './components/Footer.svelte';
-    const navbar = ['sobre mi', 'contacto', 'portafolio', 'habilidades', 'curriculum'];
+    
+	const cssVar = {
+		background : "#14162C",
+		background2 : "#39385D",
+		white : "#FFFFFF",
+		gray : "#EEEEFF",
+		red : "#FF1133",
+		violet : "#DA77FF",
+	};
+
 
 </script>
 
-<Loading />
-<Header navBar={navbar}/>
+<Loading cssVar={cssVar} />
+<Header cssVar={cssVar} />
 
-<Main element={navbar}/>
+<!-- <img class="dos" src="./assets/desing/logo.svg" alt=""> -->
+
+<Main cssVar={cssVar} />
 
 
 <Redes />
 <Footer />
 
 <style>
+	:root {
+		--background: #14162C;
+		font-size: 16px;
+	}
 
 </style>
