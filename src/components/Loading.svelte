@@ -1,6 +1,4 @@
 <script>
-    export let cssVar;
-
 
     window.onload = setTimeout(function() {
         let loading = document.getElementById('loading');
@@ -11,8 +9,7 @@
 </script>
 
 <div    class="loading"
-        id="loading"
-        style="--background: {cssVar.background};">
+        id="loading">
 
     <svg 
     xmlns="http://www.w3.org/2000/svg"

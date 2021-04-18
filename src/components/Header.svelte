@@ -1,17 +1,10 @@
 <script>
     import { each } from "svelte/internal";
 
-    export let cssVar;
-
-
-
-
-
 </script>
 
 
-<header
-    style="--background: {cssVar.background};">
+<header>
     
     <div class="header">
         <a class="header-link" href="./">

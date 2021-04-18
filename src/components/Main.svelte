@@ -1,17 +1,14 @@
 <script>
 	import Carousel from './Carousel.svelte';
-	export let cssVar;
+	import Skill from './Skill.svelte';
 </script>
 
 
 
-<main  style="--background: {cssVar.background};
-			  --background2: {cssVar.background2};
-	 		  --violet: {cssVar.violet};
-	 		  --red: {cssVar.red};">
+<main  >
 
 	<!-- INIT -->
-	<div class="me" style="--background: {cssVar.background};">
+	<div class="me">
 		<div class="me-bg"></div>
 		<span class="text" id="title">
 			Soy creador de sitios web y aplicaciones
@@ -67,7 +64,7 @@
 
 	<!-- PORTAFOLIO -->
 	<div class="data" >
-		<h2 class="title">portafolio</h2>
+		<h2 class="title">Portafolio</h2>
 		<div class="proyect">
 			<Carousel />
 		</div>
@@ -77,13 +74,36 @@
 
 	<!-- MIS HABILIDADES -->
 	<div class="data">
-		<h2 class="title">habilidades</h2>
-		<span class="text">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quibusdam sunt, dignissimos reiciendis voluptate nihil iusto facere, laborum incidunt sint fuga accusantium eius sequi illum nemo quaerat aspernatur consectetur praesentium.
+		<h2 class="title">Habilidades</h2>
+		<span class="text content">
+			<Skill data={[8, 'fab fa-python',    'python']} />
+			<Skill data={[7, 'csharp',           'c#']} />
+			<Skill data={[9, 'fab fa-git-alt',    'git']} />
+			<Skill data={[7, 'fab fa-github',    'github']} />
+			<Skill data={[9, 'fab fa-html5',     'html5']} />
+			<Skill data={[7, 'fab fa-js-square', 'js']} />
+			<Skill data={[7, 'fab fa-css3-alt',  'css3']} />
+			<Skill data={[7, 'fab fa-sass',      'sass']} />
+			<Skill data={[6, 'fab fa-bootstrap', 'bootstrap']} />
+			<Skill data={[7, 'svelte',           'svelte']} />
+			<Skill data={[6, 'fab fa-react',     'react']} />
+			<Skill data={[7, 'fab fa-node-js',   'node']} />
+			<Skill data={[7, 'fas fa-database',  'SQL']} />
+			<Skill data={[8, 'fab fa-npm',       'npm']} />
+		</span>
+		<h2 class="title">Estoy aprendiendo</h2>
+		<span class="text content">
+			<Skill data={[0, 'xd',  'xd']} />
+			<Skill data={[0, 'xd ', 'xd']} />
 		</span>
 	</div>
 	
-
+	<!-- MIS SERVICIOS -->
+	<div class="data">
+		<h2 class="title">Servicios</h2>
+		<span class="text">
+		</span>
+	</div>
 
 </main>
 
@@ -115,9 +135,9 @@
 
 	.arrow-down {
 		margin: 3rem 0;
-		fill: var(--violet);
+		fill: var(--color-icon);
 		width: 50px;
-		animation: gradient 3s infinite ;
+		animation: gradient 3s infinite;
 	}
 
 	@keyframes gradient {
@@ -125,10 +145,10 @@
             fill: #fff;
         }
         35% {
-            fill:var(--violet) ;
+            fill:var(--color-icon);
         }
         65% {
-            fill:var(--violet) ;
+            fill:var(--color-icon);
         }
 		100% {
             fill: #fff;
@@ -180,11 +200,11 @@
 		background-color: var(--background2);
 		border-radius: 50%;
 		padding: 15px;
-		fill: var(--violet);
+		fill: var(--color-icon);
 	}
 
 	.url:link, .url:active, .url:visited {
-		color: var(--violet);
+		color: var(--color-icon);
 		text-decoration: none;
 	}
 
@@ -203,6 +223,12 @@
 	}
 
 
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
+		align-items: flex-start;
+	}
 
 
 
