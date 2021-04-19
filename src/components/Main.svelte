@@ -76,32 +76,24 @@
 	<div class="data">
 		<h2 class="title">Habilidades</h2>
 		<span class="text content">
-			<Skill data={[8, 'fab fa-python',    'python']} />
-			<Skill data={[7, 'csharp',           'c#']} />
-			<Skill data={[9, 'fab fa-git-alt',    'git']} />
-			<Skill data={[7, 'fab fa-github',    'github']} />
-			<Skill data={[9, 'fab fa-html5',     'html5']} />
-			<Skill data={[7, 'fab fa-js-square', 'js']} />
-			<Skill data={[7, 'fab fa-css3-alt',  'css3']} />
-			<Skill data={[7, 'fab fa-sass',      'sass']} />
-			<Skill data={[6, 'fab fa-bootstrap', 'bootstrap']} />
-			<Skill data={[7, 'svelte',           'svelte']} />
-			<Skill data={[6, 'fab fa-react',     'react']} />
-			<Skill data={[7, 'fab fa-node-js',   'node']} />
+			<Skill data={[8, 'fab fa-python',    'Python']} />
+			<Skill data={[7, 'csharp',           'C#']} />
+			<Skill data={[9, 'fab fa-git-alt',    'Git']} />
+			<Skill data={[7, 'fab fa-github',    'Github']} />
+			<Skill data={[9, 'fab fa-html5',     'HTML5']} />
+			<Skill data={[7, 'fab fa-js-square', 'JS']} />
+			<Skill data={[7, 'fab fa-css3-alt',  'CSS3']} />
+			<Skill data={[7, 'fab fa-sass',      'Sass']} />
+			<Skill data={[6, 'fab fa-bootstrap', 'Bootstrap']} />
+			<Skill data={[7, 'svelte',           'Svelte']} />
+			<Skill data={[6, 'fab fa-react',     'React']} />
+			<Skill data={[7, 'fab fa-node-js',   'Node JS']} />
+			<Skill data={[5, 'fab fa-php',       'PHP']} />
 			<Skill data={[7, 'fas fa-database',  'SQL']} />
-			<Skill data={[8, 'fab fa-npm',       'npm']} />
 		</span>
 		<h2 class="title">Estoy aprendiendo</h2>
 		<span class="text content">
-			<Skill data={[0, 'xd',  'xd']} />
-			<Skill data={[0, 'xd ', 'xd']} />
-		</span>
-	</div>
-	
-	<!-- MIS SERVICIOS -->
-	<div class="data">
-		<h2 class="title">Servicios</h2>
-		<span class="text">
+			<Skill data={[4, 'xd',  'Adobe XD']} />
 		</span>
 	</div>
 
@@ -206,16 +198,6 @@
 	.url:link, .url:active, .url:visited {
 		color: var(--color-icon);
 		text-decoration: none;
-	}
-
-	.portafolio {
-		display: flex;
-		/* align-items: center; */
-		/* justify-content: flex-start; */
-		width: 100%;
-		margin: 0 1.5rem;
-		/* flex: 1; */
-		flex-wrap: wrap;
 	}
 
 	.proyect {
